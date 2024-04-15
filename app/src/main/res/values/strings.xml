@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">FitGoals</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register">Registrarme</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="descriptionWelcome">Descubre tu rutina de
+ejercicios ideal aquí</string>
+    <string name="welcome_slogan">Explora las mejores rutinas de ejercicio enfocadas a cada grupo de músculos, con ayudas visuales de expertos</string>
+    <string name="top_image_description_welcome">Imagen de bienvenida en la vista de Welcome</string>
 </resources>
