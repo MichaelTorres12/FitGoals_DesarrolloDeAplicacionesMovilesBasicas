@@ -6,12 +6,12 @@
 
     <ImageView
         android:id="@+id/ivTopImage"
+        android:layout_width="match_parent"
         android:layout_height="420dp"
-        android:layout_width="420dp"
-        android:src="@drawable/welcomeimage"
-        android:contentDescription="@string/top_image_description_welcome"
         android:layout_alignParentTop="true"
-        android:scaleType="centerCrop" />
+        android:contentDescription="@string/top_image_description_welcome"
+        android:scaleType="centerCrop"
+        android:src="@drawable/welcomeimage" />
 
     <TextView
         android:id="@+id/tvAppName"
@@ -60,9 +60,9 @@
         android:layout_marginEnd="24dp"
         android:layout_marginTop="35dp"
         android:text="@string/register"
-        android:backgroundTint="@color/design_default_color_primary"
+        android:backgroundTint="@color/verdeButton"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"/>
+        android:textSize="24sp"/>
 
     <Button
         android:id="@+id/btnLogin"
@@ -73,8 +73,8 @@
         android:layout_marginEnd="24dp"
         android:layout_marginTop="16dp"
         android:text="@string/login"
-        android:backgroundTint="@color/verdeButton"
+        android:backgroundTint="@color/design_default_color_primary"
         android:textColor="@color/white"
-        android:textSize="20sp"/>
+        android:textSize="24sp"/>
 
 </RelativeLayout>

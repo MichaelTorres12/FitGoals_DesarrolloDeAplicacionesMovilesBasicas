@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="imagen del header"
         android:scaleType="fitXY"
-        android:src="@drawable/headerimage"
+        android:src="@drawable/loginimage"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -100,10 +100,10 @@
 
     <!-- Registration Button -->
     <Button
-        android:id="@+id/buttonRegister"
+        android:id="@+id/buttonLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/register"
+        android:text="@string/login"
         android:backgroundTint="@color/design_default_color_primary"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
