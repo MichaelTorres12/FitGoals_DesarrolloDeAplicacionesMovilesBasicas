@@ -22,7 +22,7 @@
             android:exported="true" />
 
         <activity
-            android:name=".activities.WelcomeActivityApp"
+            android:name=".activities.ProfileCustomizationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +38,8 @@
         <activity android:name=".activities.LoginActivity">
 
         </activity>
+
+
 
 
     </application>
