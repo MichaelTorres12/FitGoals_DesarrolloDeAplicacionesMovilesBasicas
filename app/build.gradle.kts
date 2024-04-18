@@ -44,6 +44,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.android.gms:play-services-base:18.4.0")
     implementation("com.google.firebase:firebase-auth-ktx:22.3.1")
+    implementation("com.google.firebase:firebase-firestore-ktx:24.11.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -57,7 +58,7 @@ dependencies {
 
     // Firebase Authentication
 
-    // Cloud Firestore
+// Cloud Firestore
     implementation(platform("com.google.firebase:firebase-firestore-ktx"))
     //Cloud Functions para Firebase
     implementation(platform("com.google.firebase:firebase-functions-ktx"))

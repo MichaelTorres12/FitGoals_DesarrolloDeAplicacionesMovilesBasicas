@@ -84,7 +84,7 @@ class RegisterActivity : AppCompatActivity() {
             val account = completedTask.getResult(ApiException::class.java)
             firebaseAuthWithGoogle(account.idToken!!)
         } catch (e: ApiException) {
-// Log the error or handle the sign in failure
+// Log el error or manejar el registro fallido
         }
     }
 
@@ -96,20 +96,17 @@ class RegisterActivity : AppCompatActivity() {
         FirebaseAuth.getInstance().signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Here you can either navigate to the next screen, or do some work with the FirebaseUser
-                    // FirebaseUser user = task.getResult().getUser();
-                    // Update UI with the user information or store user data in the database
                     // Navegar a la siguiente pantalla cuando los datos digitados son guardado en la DB
 
                     // Establece un click listener en el botón
                     buttonRegister.setOnClickListener {
-                        // Crea un Intent para iniciar ProfileCustomizationActivity
+                        // Crea un Intent para iniciar ProfileCustomizationActivity (usando boton de google)
                         val intent = Intent(this, ProfileCustomizationActivity::class.java)
                         startActivity(intent)
                 }
                 }
                 else {
-                    // If sign in fails, display a message to the user.
+                    //Si el registro falla, mostrar un mensaje al usuario
                 }
             }
     }

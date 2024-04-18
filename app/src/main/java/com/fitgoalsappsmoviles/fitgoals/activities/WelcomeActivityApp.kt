@@ -12,7 +12,6 @@ class WelcomeActivityApp : AppCompatActivity() {
         setContentView(R.layout.activity_welcome)
 
         // Encuentra el botón por su ID
-        // Conectar con la vista del register
         val buttonRegister = findViewById<Button>(R.id.btnRegister)
 
         //Conectar con la vista del login
@@ -27,7 +26,7 @@ class WelcomeActivityApp : AppCompatActivity() {
 
         // Establece un click listener en el botón
         buttonLogin.setOnClickListener {
-            // Crea un Intent para iniciar LoginActivity
+            // Crea un segundo Intent para iniciar LoginActivity
             val intent2 = Intent(this, LoginActivity::class.java)
             startActivity(intent2)
         }
