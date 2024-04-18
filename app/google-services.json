@@ -12,7 +12,20 @@
           "package_name": "com.fitgoalsappsmoviles.fitgoals"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "54480195605-3cc1odncn4qlr39iq2k1vtjbik35s2p7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fitgoalsappsmoviles.fitgoals",
+            "certificate_hash": "dc4e11221b4d4bad05cb13d73c6d087587b589ba"
+          }
+        },
+        {
+          "client_id": "54480195605-ofopk2gs9c5ti2fud9d5p5l686f1vs92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAs8GSbNsxhmybRwjXB2TUcMRzxetsb2IQ"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54480195605-ndpdlo15apsusk1fotil2tq1frkjl9c0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

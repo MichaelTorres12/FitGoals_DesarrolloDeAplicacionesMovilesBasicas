@@ -9,6 +9,8 @@ ejercicios ideal aquí</string>
     <string name="welcome_slogan">Explora las mejores rutinas de ejercicio enfocadas a cada grupo de músculos, con ayudas visuales de expertos</string>
     <string name="top_image_description_welcome">Imagen de bienvenida en la vista de Welcome</string>
 
+    //Register Strings
+    <string name="default_web_client_id">54480195605-3cc1odncn4qlr39iq2k1vtjbik35s2p7.apps.googleusercontent.com</string>
 
     //Personalizacion del perfil
     <string name="personalizacion_texto">Vamos a personalizar tu perfil, por favor completa los siguientes campos.</string>

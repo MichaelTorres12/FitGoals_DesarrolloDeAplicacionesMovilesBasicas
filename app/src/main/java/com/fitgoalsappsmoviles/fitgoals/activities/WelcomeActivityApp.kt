@@ -27,7 +27,7 @@ class WelcomeActivityApp : AppCompatActivity() {
 
         // Establece un click listener en el botón
         buttonLogin.setOnClickListener {
-            // Crea un Intent para iniciar RegisterActivity
+            // Crea un Intent para iniciar LoginActivity
             val intent2 = Intent(this, LoginActivity::class.java)
             startActivity(intent2)
         }

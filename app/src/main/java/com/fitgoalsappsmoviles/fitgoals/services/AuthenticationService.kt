@@ -3,10 +3,11 @@ package com.fitgoalsappsmoviles.fitgoals.services
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
+import com.fitgoalsappsmoviles.fitgoals.repositories.UserRepository
 
-class AuthenticationService : Service() {
+class AuthenticationService(private val repository: UserRepository) {
 
-    override fun onBind(intent: Intent): IBinder {
-        TODO("Return the communication channel to the service.")
+    fun registerUser(email: String, password: String, callback: (Boolean) -> Unit) {
+        repository.registerUser(email, password, callback)
     }
 }
