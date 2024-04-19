@@ -1,14 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ProfileFragment">
+    android:fillViewport="true">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ProfileTextHeader"
+            android:textColor="@color/MoraditoParaTextoGrandes"
+            android:textStyle="bold"
+            android:textSize="32dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- Correo Electrónico -->
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correo electrónico:"
+            android:textSize="18dp"
+            android:padding="8dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold" />
+
+        <!-- Edad -->
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edad:"
+            android:textSize="18dp"
+            android:padding="8dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold" />
+
+        <!-- Sexo -->
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sexo:"
+            android:textSize="18dp"
+            android:padding="8dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold" />
+
+        <!-- Estatura -->
+        <TextView
+            android:id="@+id/tvHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estatura:"
+            android:textSize="18dp"
+            android:padding="8dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold" />
+
+        <!-- Sección para el control de peso -->
+        <TextView
+            android:id="@+id/tvWeightControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peso actual:"
+            android:textSize="18dp"
+            android:padding="8dp"
+            android:layout_marginBottom="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/UpdateWeightData"
+            android:textColor="@color/AzulParaTextoImportantesPeroNoTantos"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- EditText para ingresar nuevo peso -->
+        <EditText
+            android:id="@+id/etNewWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresar peso (lb)"
+            android:textSize="18dp"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp" />
+
+        <!-- Botón para actualizar el peso -->
+        <Button
+            android:id="@+id/btnUpdateWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actualizar Peso"
+            android:textSize="20dp"
+            android:layout_marginBottom="160dp"
+            android:padding="8dp" />
+
+        <!-- Botón para cerrar sesión -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesión"
+            android:textSize="20dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
+    </LinearLayout>
+</ScrollView>

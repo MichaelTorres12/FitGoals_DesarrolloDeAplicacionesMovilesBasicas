@@ -14,4 +14,20 @@ ejercicios ideal aquí</string>
 
     //Personalizacion del perfil
     <string name="personalizacion_texto">Vamos a personalizar tu perfil, por favor completa los siguientes campos.</string>
+
+    //Vista prinicpal
+    
+    //Vista de Ejercicios
+    
+    //Vista de perfil
+    <string name="home">Home</string>
+    <string name="profile">Perfil</string>
+    <string name="HomeTextHeader">ESTA ES LA VISTA DE HOME</string>
+    <string name="ProfileTextHeader">Bienvenido a tu perfil 😎</string>
+    <string name="email_label">Correo electrónico: %s</string>
+    <string name="age_label">Edad: %s</string>
+    <string name="gender_label">Sexo: %s</string>
+    <string name="height_label">Estatura: %s</string>
+    <string name="weight_label">Peso actual: %s</string>
+    <string name="UpdateWeightData">Ingresa tu nuevo pasa para guardarlo y te movtives a continuar con tus metas 🥳🥳</string>
 </resources>

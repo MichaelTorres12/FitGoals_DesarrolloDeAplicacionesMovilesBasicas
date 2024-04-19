@@ -6,4 +6,6 @@
     <color name="greenWelcome">#FF00AA58</color>
     <color name="verdeButton">#FF6BB32B</color>
     <color name="grisTenueContraste">#FFEF91B1</color>
+    <color name="MoraditoParaTextoGrandes">#FF2D63FF</color>
+    <color name="AzulParaTextoImportantesPeroNoTantos">#FF108CFD</color>
 </resources>
