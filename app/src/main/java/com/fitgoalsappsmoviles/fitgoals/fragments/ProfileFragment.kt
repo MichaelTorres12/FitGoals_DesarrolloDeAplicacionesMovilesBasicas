@@ -43,7 +43,6 @@ class ProfileFragment : Fragment() {
                 tvGender.text = getString(R.string.gender_label, it.gender)
                 tvHeight.text = getString(R.string.height_label, it.height.toString())
                 tvWeight.text = getString(R.string.weight_label, it.weight.toString())
-                // tvPreviousWeights.text = ... Debes actualizar esto según tu modelo y base de datos
             }
         }
 

@@ -16,13 +16,14 @@ ejercicios ideal aquí</string>
     <string name="personalizacion_texto">Vamos a personalizar tu perfil, por favor completa los siguientes campos.</string>
 
     //Vista prinicpal
+    <string name="HomeTextHeader">Elige el grupo muscular que deseas trabajar hoy</string>
     
     //Vista de Ejercicios
     
     //Vista de perfil
     <string name="home">Home</string>
     <string name="profile">Perfil</string>
-    <string name="HomeTextHeader">ESTA ES LA VISTA DE HOME</string>
+
     <string name="ProfileTextHeader">Bienvenido a tu perfil 😎</string>
     <string name="email_label">Correo electrónico: %s</string>
     <string name="age_label">Edad: %s</string>

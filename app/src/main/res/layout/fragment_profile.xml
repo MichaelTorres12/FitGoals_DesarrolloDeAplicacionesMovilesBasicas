@@ -16,7 +16,7 @@
             android:text="@string/ProfileTextHeader"
             android:textColor="@color/MoraditoParaTextoGrandes"
             android:textStyle="bold"
-            android:textSize="32dp"
+            android:textSize="32sp"
             android:layout_marginBottom="20dp"
             android:layout_gravity="center_horizontal"/>
 
