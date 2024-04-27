@@ -8,4 +8,5 @@
     <color name="grisTenueContraste">#FFEF91B1</color>
     <color name="MoraditoParaTextoGrandes">#FF2D63FF</color>
     <color name="AzulParaTextoImportantesPeroNoTantos">#FF108CFD</color>
+    <color name="fondoParaLasCateegoriasYEjercicios">#FFD9D9D9</color>
 </resources>
