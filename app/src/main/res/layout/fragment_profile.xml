@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/homeFragmentBackground"
     android:fillViewport="true">
 
     <LinearLayout
@@ -26,8 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Correo electrónico:"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:padding="8dp"
+            android:textColor="@color/black"
             android:layout_marginBottom="10dp"
             android:textStyle="bold" />
 
@@ -37,8 +39,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Edad:"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:padding="8dp"
+            android:textColor="@color/black"
             android:layout_marginBottom="10dp"
             android:textStyle="bold" />
 
@@ -48,8 +51,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sexo:"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:padding="8dp"
+            android:textColor="@color/black"
             android:layout_marginBottom="10dp"
             android:textStyle="bold" />
 
@@ -59,8 +63,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Estatura:"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:padding="8dp"
+            android:textColor="@color/black"
             android:layout_marginBottom="10dp"
             android:textStyle="bold" />
 
@@ -70,8 +75,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Peso actual:"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:padding="8dp"
+            android:textColor="@color/black"
             android:layout_marginBottom="25dp"
             android:textStyle="bold" />
 
@@ -81,7 +87,7 @@
             android:text="@string/UpdateWeightData"
             android:textColor="@color/AzulParaTextoImportantesPeroNoTantos"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="21dp"
             android:layout_marginBottom="10dp"
             android:gravity="center_horizontal"
             android:layout_gravity="center_horizontal"/>
@@ -92,8 +98,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ingresar peso (lb)"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:inputType="numberDecimal"
+            android:textColor="@color/black"
             android:layout_marginBottom="10dp"
             android:padding="10dp" />
 
@@ -104,7 +111,18 @@
             android:layout_height="wrap_content"
             android:text="Actualizar Peso"
             android:textSize="20dp"
-            android:layout_marginBottom="160dp"
+            android:layout_marginBottom="50dp"
+            android:padding="8dp" />
+
+        <!-- Botón para mostrar nuestros datos -->
+        <Button
+            android:id="@+id/btnSeeCredits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver creditos"
+            android:textSize="20dp"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="@color/verdeButton"
             android:padding="8dp" />
 
         <!-- Botón para cerrar sesión -->

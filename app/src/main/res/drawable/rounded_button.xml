@@ -3,3 +3,4 @@
     <solid android:color="@color/fondoParaLasCateegoriasYEjercicios"/>
     <corners android:radius="10dp"/> <!-- Radio de las esquinas -->
 </shape>
+

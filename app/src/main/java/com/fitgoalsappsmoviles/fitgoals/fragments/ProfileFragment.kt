@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.fitgoalsappsmoviles.fitgoals.R
+import com.fitgoalsappsmoviles.fitgoals.activities.CreditosActivity
 import com.fitgoalsappsmoviles.fitgoals.activities.WelcomeActivityApp
 import com.fitgoalsappsmoviles.fitgoals.viewmodels.ProfileViewModel
 
@@ -73,6 +74,13 @@ class ProfileFragment : Fragment() {
             startActivity(intent)
 
             activity?.finish()
+        }
+
+        val btnSeeCredits: Button = view.findViewById(R.id.btnSeeCredits)
+        btnSeeCredits.setOnClickListener {
+            // Inicia CreditosActivity cuando se hace clic en el botón
+            val intent = Intent(activity, CreditosActivity::class.java)
+            startActivity(intent)
         }
 
         // Iniciar la carga de datos del perfil del usuario

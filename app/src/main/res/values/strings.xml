@@ -31,4 +31,14 @@ ejercicios ideal aquí</string>
     <string name="height_label">Estatura: %s</string>
     <string name="weight_label">Peso actual: %s</string>
     <string name="UpdateWeightData">Ingresa tu nuevo pasa para guardarlo y te movtives a continuar con tus metas 🥳🥳</string>
+
+    //Vista de los creditos
+    <string name="credits_title">Créditos</string>
+    <string name="credits_app_done_for">Aplicación hecha por:</string>
+    <string name="back_button">Regresar</string>
+    <string name="nuestrosNombres">Michael Fernando Torres Callejas, TC100220.\nCarlos Emiliano Torres Callejas, TC100321.\nGerson Daniel Monroy Valladares, MV100521.\nRodrigo Antonio Guzman Angulo, GA100620.</string>
+    <string name="module">Asignatura:</string>
+    <string name="moduleName">Desarrollo de Aplicaciónes Básicas, Grupo 01</string>
+    <string name="teacher">Docente de la asignatura:</string>
+    <string name="teacherName">Jaime Geovanni Cortez Flores</string>
 </resources>
