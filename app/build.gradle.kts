@@ -38,6 +38,8 @@ android {
 
 dependencies {
 
+    //Casi todos los comentarios estan en inglés porque los copiamos tal cual de la documentacion oficial de google con comentarios y todo
+
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
@@ -58,7 +60,7 @@ dependencies {
 
     // Firebase Authentication
 
-// Cloud Firestore
+    // Cloud Firestore
     implementation(platform("com.google.firebase:firebase-firestore-ktx"))
     //Cloud Functions para Firebase
     implementation(platform("com.google.firebase:firebase-functions-ktx"))

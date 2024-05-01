@@ -14,7 +14,7 @@ class WelcomeActivityApp : AppCompatActivity() {
         // Encuentra el botón por su ID
         val buttonRegister = findViewById<Button>(R.id.btnRegister)
 
-        //Conectar con la vista del login
+        //Conecta con la vista del login
         val buttonLogin = findViewById<Button>(R.id.btnLogin)
 
         // Establece un click listener en el botón

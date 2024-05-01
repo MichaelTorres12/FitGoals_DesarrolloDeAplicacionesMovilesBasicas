@@ -14,9 +14,9 @@ class ProfileViewModel : ViewModel() {
 
     fun updateUserProfile(userProfileData: UserProfile, callback: (Boolean) -> Unit) {
         FirebaseAuth.getInstance().currentUser?.let { firebaseUser ->
-            val email = firebaseUser.email // Puede ser null si el usuario no tiene email
+            val email = firebaseUser.email
             val userId = firebaseUser.uid
-            // Asegúrate de que tu clase UserProfile incluya estas propiedades.
+            // Aseguramos que nuestra clase UserProfile incluye estas propiedades.
             val updatedUserProfile = userProfileData.copy(email = email, userId = userId)
             userRepository.addUserProfile(updatedUserProfile) { isSuccessful ->
                 if (isSuccessful) {

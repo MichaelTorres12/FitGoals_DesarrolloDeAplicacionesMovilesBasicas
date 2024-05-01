@@ -35,7 +35,7 @@ class ProfileFragment : Fragment() {
         val btnUpdateWeight = view.findViewById<Button>(R.id.btnUpdateWeight)
         val btnLogout = view.findViewById<Button>(R.id.btnLogout)
 
-        // Observa los datos del perfil del usuario
+        // Observando los datos del perfil del usuario
         profileViewModel.userProfile.observe(viewLifecycleOwner) { userProfile ->
             userProfile?.let {
                 // Actualizar la UI con los datos del perfil

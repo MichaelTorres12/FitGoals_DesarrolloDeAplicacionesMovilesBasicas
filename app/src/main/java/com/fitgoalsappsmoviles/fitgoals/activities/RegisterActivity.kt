@@ -32,9 +32,9 @@ class RegisterActivity : AppCompatActivity() {
         val buttonRegister = findViewById<Button>(R.id.buttonRegister)
         val emailEditText = findViewById<EditText>(R.id.editTextEmail)
         val passwordEditText = findViewById<EditText>(R.id.editTextPassword)
-        val googleSignInButton = findViewById<SignInButton>(R.id.sign_in_google_button) // Asegúrate de que el ID es correcto
+        val googleSignInButton = findViewById<SignInButton>(R.id.sign_in_google_button)
 
-        // Configura Google Sign-In Client
+        // Configuracion del Google Sign-In Client
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
@@ -84,7 +84,7 @@ class RegisterActivity : AppCompatActivity() {
             val account = completedTask.getResult(ApiException::class.java)
             firebaseAuthWithGoogle(account.idToken!!)
         } catch (e: ApiException) {
-// Log el error or manejar el registro fallido
+        // Log el error y manejar el registro fallido
         }
     }
 
@@ -98,9 +98,9 @@ class RegisterActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Navegar a la siguiente pantalla cuando los datos digitados son guardado en la DB
 
-                    // Establece un click listener en el botón
+                    // Establecemos un click listener en el botón
                     buttonRegister.setOnClickListener {
-                        // Crea un Intent para iniciar ProfileCustomizationActivity (usando boton de google)
+                        // Creamos un Intent para iniciar ProfileCustomizationActivity (usando boton de google)
                         val intent = Intent(this, ProfileCustomizationActivity::class.java)
                         startActivity(intent)
                 }

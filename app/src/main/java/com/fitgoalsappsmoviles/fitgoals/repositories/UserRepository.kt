@@ -49,7 +49,7 @@ class UserRepository {
             val email = user.email ?: "email no proporcionado"
             val userId = user.uid
 
-            // Asegúrate de que el modelo UserProfile tenga las propiedades email y userId.
+            // Asegurandonos de que el modelo UserProfile tenga las propiedades email y userId.
             val updatedUserProfile = userProfile.copy(email = email, userId = userId)
 
             firestore.collection("userProfiles").document(userId).set(updatedUserProfile)

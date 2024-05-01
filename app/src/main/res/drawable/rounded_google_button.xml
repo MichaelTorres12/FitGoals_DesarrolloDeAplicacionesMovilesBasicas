@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="20dp" /> <!-- Radio de 20dp para los bordes -->
+    <solid android:color="#FFFFFF" /> <!-- Fondo blanco, cambia el color si es necesario -->
+    <stroke android:width="1dp" android:color="#000000" /> <!-- Borde opcional, quítalo si no quieres borde visible -->
+</shape>
