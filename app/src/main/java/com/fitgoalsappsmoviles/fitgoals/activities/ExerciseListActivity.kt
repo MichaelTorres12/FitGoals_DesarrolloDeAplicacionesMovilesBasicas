@@ -17,7 +17,8 @@ class ExerciseListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_exercise_list)
 
         val muscleGroupId = intent.getStringExtra("muscleGroupId") ?: return
-        val exerciseAdapter = ExerciseAdapter(emptyList())
+        // Pasamos 'this' como contexto al adapter
+        val exerciseAdapter = ExerciseAdapter(emptyList(), this)
 
         val recyclerView = findViewById<RecyclerView>(R.id.rvExercises)
         recyclerView.adapter = exerciseAdapter

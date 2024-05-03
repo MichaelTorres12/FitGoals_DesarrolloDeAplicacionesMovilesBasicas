@@ -12,4 +12,5 @@
     <color name="homeFragmentBackground">#FFFDFDFD</color>
     <color name="verCreditosButton">#FFFFBA05</color>
     <color name="backButton">#FFFE4646</color>
+    <color name="ejercicioColorHeader">#FF3073FF</color>
 </resources>

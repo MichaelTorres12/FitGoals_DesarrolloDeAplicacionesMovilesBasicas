@@ -27,8 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintTop_toBottomOf="@+id/tvExerciseHeader"
         app:layout_constraintVertical_bias="0.846"
         tools:layout_editor_absoluteX="16dp" />
