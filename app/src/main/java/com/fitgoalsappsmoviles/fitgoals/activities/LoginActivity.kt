@@ -6,6 +6,7 @@ import com.fitgoalsappsmoviles.fitgoals.R
 import android.content.Intent
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.fitgoalsappsmoviles.fitgoals.MainActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -45,10 +46,12 @@ class LoginActivity : AppCompatActivity() {
                         navigateToProfileCustomization()
                     } else {
                         // Error de inicio de sesión, mostrar mensaje al usuario
+                        Toast.makeText(this, "El correo o la contraseña no coinciden", Toast.LENGTH_SHORT).show()
                     }
                 }
             } else {
                 // Los campos están vacíos, mostrar mensaje al usuario
+                Toast.makeText(this, "Los campos de Correo y Contraseña deben de estar llenados", Toast.LENGTH_SHORT).show()
             }
         }
 

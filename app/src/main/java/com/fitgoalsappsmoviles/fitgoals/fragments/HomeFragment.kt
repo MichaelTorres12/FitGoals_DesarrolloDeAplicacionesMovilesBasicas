@@ -1,5 +1,6 @@
 package com.fitgoalsappsmoviles.fitgoals.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fitgoalsappsmoviles.fitgoals.R
 import com.fitgoalsappsmoviles.fitgoals.adapters.MuscleGroupAdapter
+import com.fitgoalsappsmoviles.fitgoals.activities.ExerciseListActivity
 import com.fitgoalsappsmoviles.fitgoals.viewmodels.HomeViewModel
 
 class HomeFragment : Fragment() {
@@ -20,7 +22,11 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         val muscleGroupRecyclerView: RecyclerView = view.findViewById(R.id.rvMuscleGroups)
-        adapter = MuscleGroupAdapter(emptyList())
+        adapter = MuscleGroupAdapter(emptyList()) { muscleGroupId ->
+            val intent = Intent(context, ExerciseListActivity::class.java)
+            intent.putExtra("muscleGroupId", muscleGroupId)
+            startActivity(intent)
+        }
         muscleGroupRecyclerView.adapter = adapter
         muscleGroupRecyclerView.layoutManager = LinearLayoutManager(context)
 

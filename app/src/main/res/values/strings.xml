@@ -17,9 +17,9 @@ ejercicios ideal aquí</string>
 
     //Vista prinicpal
     <string name="HomeTextHeader">Elige el grupo muscular que deseas trabajar hoy</string>
-    
+
     //Vista de Ejercicios
-    
+
     //Vista de perfil
     <string name="home">Home</string>
     <string name="profile">Perfil</string>
@@ -41,4 +41,5 @@ ejercicios ideal aquí</string>
     <string name="moduleName">Desarrollo de Aplicaciónes Básicas, Grupo 01</string>
     <string name="teacher">Docente de la asignatura:</string>
     <string name="teacherName">Jaime Geovanni Cortez Flores</string>
+    <string name="ejerciciosVistaHeader">Ejercítate a tu ritmo y apóyate de tutoriales</string>
 </resources>

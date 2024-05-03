@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.fitgoalsappsmoviles.fitgoals.MainActivity
@@ -51,11 +52,13 @@ class ProfileCustomizationActivity : AppCompatActivity() {
                     } else {
                         // Hubo un error al guardar los datos
                         Log.e("ProfileCustomization", "Error al guardar el perfil del usuario")
+                        Toast.makeText(this, "Error al guardar el perfil del usuario", Toast.LENGTH_SHORT).show()
                     }
                 }
             } else {
                 // Alguna de la información del perfil del usuario es inválida
                 Log.e("ProfileCustomization", "La información del perfil del usuario es inválida")
+                Toast.makeText(this, "Debes rellenar todos los campos con la información válida", Toast.LENGTH_SHORT).show()
             }
         }
     }
