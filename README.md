@@ -1,3 +1,5 @@
+Antes que nada, deben de ir a buscar el SDK de Kotlin y crear una carpeta de local.propierties (Pidanmela para que se las pase y pegen sus SDK)
+
 # Flujo de la Aplicación y Componentes Utilizados
 
 ## Inicio de la App (Bienvenida)
