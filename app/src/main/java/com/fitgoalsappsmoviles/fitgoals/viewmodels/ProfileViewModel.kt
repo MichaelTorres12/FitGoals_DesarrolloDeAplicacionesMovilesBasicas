@@ -12,11 +12,13 @@ class ProfileViewModel : ViewModel() {
     val userProfile = MutableLiveData<UserProfile>()
     val errorMessages = MutableLiveData<String>()
 
+    // Método para actualizar el perfil de usuario en Firestore.
     fun updateUserProfile(userProfileData: UserProfile, callback: (Boolean) -> Unit) {
         FirebaseAuth.getInstance().currentUser?.let { firebaseUser ->
             val email = firebaseUser.email
             val userId = firebaseUser.uid
-            // Aseguramos que nuestra clase UserProfile incluye estas propiedades.
+
+            // Asegura que nuestra clase UserProfile incluye email y userId.
             val updatedUserProfile = userProfileData.copy(email = email, userId = userId)
             userRepository.addUserProfile(updatedUserProfile) { isSuccessful ->
                 if (isSuccessful) {
@@ -33,6 +35,7 @@ class ProfileViewModel : ViewModel() {
         }
     }
 
+    // Método para cargar el perfil de usuario desde Firestore.
     fun loadUserProfile() {
         val userId = userRepository.getCurrentUserId()
         userId?.let {
@@ -48,12 +51,13 @@ class ProfileViewModel : ViewModel() {
         }
     }
 
+    // Método para añadir un nuevo peso al perfil del usuario y actualizar en Firestore.
     fun addNewWeight(newWeight: Double) {
         val userId = userRepository.getCurrentUserId()
         if (userId != null) {
             userRepository.updateWeight(userId, newWeight) { isSuccessful ->
                 if (isSuccessful) {
-                    loadUserProfile()
+                    loadUserProfile() // Recarga los datos del perfil actualizados.
                 } else {
                     errorMessages.postValue("Error al actualizar el peso.")
                 }
@@ -63,8 +67,9 @@ class ProfileViewModel : ViewModel() {
         }
     }
 
+    // Método para cerrar la sesión del usuario actual.
     fun logOut() {
-        userRepository.logOut()
-        userProfile.value = null
+        userRepository.logOut() // Llama al método logOut de UserRepository para cerrar la sesión.
+        userProfile.value = null // Limpia los datos del perfil del usuario en la vista.
     }
 }

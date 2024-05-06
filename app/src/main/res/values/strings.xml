@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">FitGoals</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="register">Registrarme</string>
     <string name="login">Iniciar Sesión</string>
@@ -19,11 +19,13 @@ ejercicios ideal aquí</string>
     <string name="HomeTextHeader">Elige el grupo muscular que deseas trabajar hoy</string>
 
     //Vista de Ejercicios
+    <string name="ejerciciosVistaHeader">Ejercítate a tu ritmo y apóyate de tutoriales</string>
 
-    //Vista de perfil
+    //El menú inferior
     <string name="home">Home</string>
     <string name="profile">Perfil</string>
 
+    //Vista de perfil
     <string name="ProfileTextHeader">Bienvenido a tu perfil 😎</string>
     <string name="email_label">Correo electrónico: %s</string>
     <string name="age_label">Edad: %s</string>
@@ -41,5 +43,5 @@ ejercicios ideal aquí</string>
     <string name="moduleName">Desarrollo de Aplicaciónes Básicas, Grupo 01</string>
     <string name="teacher">Docente de la asignatura:</string>
     <string name="teacherName">Jaime Geovanni Cortez Flores</string>
-    <string name="ejerciciosVistaHeader">Ejercítate a tu ritmo y apóyate de tutoriales</string>
+
 </resources>

@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--Metemos todo dentro de un Scroll para que se adapte a todas las pantallas-->
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/welcomeBackroundColor">
 
+    <!--Este es el contraint layout que contiene todos los elementos de la vista-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:background="@color/welcomeBackroundColor">
 
+        <!--Imagen del principio-->
     <ImageView
         android:id="@+id/imageViewHeader"
         android:layout_width="0dp"
@@ -23,6 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+        <!--Nombre de la APP-->
     <TextView
         android:id="@+id/textViewAppName"
         android:layout_width="wrap_content"
@@ -48,6 +54,7 @@
         app:layout_constraintTop_toBottomOf="@id/textViewAppName"
         app:layout_constraintStart_toStartOf="parent"/>
 
+        <!--Permitir al usuario meter correo-->
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="0dp"
@@ -71,6 +78,7 @@
         app:layout_constraintTop_toBottomOf="@id/editTextEmail"
         app:layout_constraintStart_toStartOf="parent"/>
 
+        <!--Permitir a los usuario meter la contraseña-->
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="0dp"
@@ -94,6 +102,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+        <!--Boton de inicio de sesión con Google-->
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_google_button"
         android:layout_width="0dp"
@@ -103,6 +112,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+        <!--Boton de iniciar sesión-->
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="0dp"

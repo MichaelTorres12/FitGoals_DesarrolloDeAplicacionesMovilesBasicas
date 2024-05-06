@@ -7,13 +7,14 @@
     android:background="@color/homeFragmentBackground"
     tools:context=".activities.ExerciseDetailActivity">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:paddingTop="50dp"
         android:paddingRight="16dp"
         android:paddingLeft="16dp"
-        android:background="@color/homeFragmentBackground">
+        android:paddingBottom="120dp">
 
     <TextView
         android:id="@+id/tvExerciseName"
@@ -78,7 +79,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="4 x 12" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -16,9 +16,9 @@ import com.fitgoalsappsmoviles.fitgoals.activities.CreditosActivity
 import com.fitgoalsappsmoviles.fitgoals.activities.WelcomeActivityApp
 import com.fitgoalsappsmoviles.fitgoals.viewmodels.ProfileViewModel
 
+// ProfileFragment permite al usuario ver y actualizar su información de perfil y cerrar sesión, al igual que navegar a la vista de los creditos.
 class ProfileFragment : Fragment() {
-
-    private val profileViewModel: ProfileViewModel by viewModels()
+    private val profileViewModel: ProfileViewModel by viewModels()  // ViewModel que maneja la información del perfil del usuario.
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +26,7 @@ class ProfileFragment : Fragment() {
     ): View {
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
+        // Vincula los componentes de la UI con las variables.
         val tvEmail = view.findViewById<TextView>(R.id.tvEmail)
         val tvAge = view.findViewById<TextView>(R.id.tvAge)
         val tvGender = view.findViewById<TextView>(R.id.tvGender)
@@ -35,10 +36,9 @@ class ProfileFragment : Fragment() {
         val btnUpdateWeight = view.findViewById<Button>(R.id.btnUpdateWeight)
         val btnLogout = view.findViewById<Button>(R.id.btnLogout)
 
-        // Observando los datos del perfil del usuario
+        // Observa los cambios en el perfil del usuario y actualiza la UI.
         profileViewModel.userProfile.observe(viewLifecycleOwner) { userProfile ->
             userProfile?.let {
-                // Actualizar la UI con los datos del perfil
                 tvEmail.text = getString(R.string.email_label, it.email)
                 tvAge.text = getString(R.string.age_label, it.age.toString())
                 tvGender.text = getString(R.string.gender_label, it.gender)
@@ -47,46 +47,38 @@ class ProfileFragment : Fragment() {
             }
         }
 
-        // Observa mensajes de error
-        profileViewModel.errorMessages.observe(viewLifecycleOwner) { errorMessage ->
-            if (!errorMessage.isNullOrEmpty()) {
-                Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
-                profileViewModel.errorMessages.value = "" // Resetear el mensaje de error después de mostrarlo
-            }
-        }
-
+        // Actualiza el peso del usuario en la base de datos al hacer clic en el botón.
         btnUpdateWeight.setOnClickListener {
             val newWeightText = etNewWeight.text.toString()
             if (newWeightText.isNotEmpty()) {
                 val newWeight = newWeightText.toDouble()
-                profileViewModel.addNewWeight(newWeight)
-                etNewWeight.text.clear()
+                profileViewModel.addNewWeight(newWeight)  // Llama al ViewModel para actualizar el peso.
+                etNewWeight.text.clear()  // Limpia el campo de texto.
             } else {
                 Toast.makeText(context, "Por favor, introduce un peso válido.", Toast.LENGTH_LONG).show()
             }
         }
 
+        // Cierra la sesión del usuario y regresa a la pantalla de bienvenida.
         btnLogout.setOnClickListener {
             profileViewModel.logOut()
-
             val intent = Intent(activity, WelcomeActivityApp::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
-
             activity?.finish()
         }
 
+        // Navega a la pantalla de créditos al hacer clic en el botón correspondiente.
         val btnSeeCredits: Button = view.findViewById(R.id.btnSeeCredits)
         btnSeeCredits.setOnClickListener {
-            // Inicia CreditosActivity cuando se hace clic en el botón
             val intent = Intent(activity, CreditosActivity::class.java)
             startActivity(intent)
         }
 
-        // Iniciar la carga de datos del perfil del usuario
-        profileViewModel.loadUserProfile()
+        profileViewModel.loadUserProfile()  // Carga la información del perfil del usuario al iniciar la vista.
 
         return view
     }
 }
+
 

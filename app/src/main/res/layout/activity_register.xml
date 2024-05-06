@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView permite que el contenido sea desplazable cuando hay más elementos de los que pueden caber en la pantalla. -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/welcomeBackroundColor">
 
+    <!-- ConstraintLayout permite un posicionamiento flexible y preciso de los elementos UI en la pantalla. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,112 +14,116 @@
         android:paddingRight="16dp"
         android:background="@color/welcomeBackroundColor">
 
-    <ImageView
-        android:id="@+id/imageViewHeader"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:contentDescription="imagen del header"
-        android:scaleType="fitXY"
-        android:src="@drawable/headerimage"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- ImageView para mostrar una imagen de cabecera en la pantalla de registro. -->
+        <ImageView
+            android:id="@+id/imageViewHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="imagen del header"
+            android:scaleType="fitXY"
+            android:src="@drawable/headerimage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <TextView
-        android:id="@+id/textViewAppName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="FitGoals"
-        android:textColor="@color/greenWelcome"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintTop_toBottomOf="@id/imageViewHeader"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- TextView para mostrar el nombre de la aplicación en la pantalla de registro. -->
+        <TextView
+            android:id="@+id/textViewAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="FitGoals"
+            android:textColor="@color/greenWelcome"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintTop_toBottomOf="@id/imageViewHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <TextView
-        android:id="@+id/mailText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Correo:"
-        android:textColor="@color/grisTenueContraste"
-        android:layout_marginTop="10sp"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/textViewAppName"/>
+        <!-- TextView para etiquetar el campo de correo electrónico. -->
+        <TextView
+            android:id="@+id/mailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo:"
+            android:textColor="@color/grisTenueContraste"
+            android:layout_marginTop="10sp"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/textViewAppName"/>
 
+        <!-- EditText para ingresar el correo electrónico del usuario. -->
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="correodeejemplo@correo.com"
+            android:textSize="20sp"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/mailText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="correodeejemplo@correo.com"
-        android:textSize="20sp"
-        android:inputType="textEmailAddress"
-        android:textColor="#000000"
-        app:layout_constraintTop_toBottomOf="@id/mailText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- TextView para etiquetar el campo de contraseña. -->
+        <TextView
+            android:id="@+id/passwordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraseña:"
+            android:textColor="@color/grisTenueContraste"
+            android:layout_marginTop="15sp"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/editTextEmail"/>
 
-    <TextView
-        android:id="@+id/passwordText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contraseña:"
-        android:textColor="@color/grisTenueContraste"
-        android:layout_marginTop="15sp"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/editTextEmail"/>
+        <!-- EditText para ingresar la contraseña del usuario. -->
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="***************"
+            android:textSize="20sp"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/passwordText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
+        <!-- TextView divisor con texto "o" para separar las opciones de registro. -->
+        <TextView
+            android:id="@+id/orTextDivisor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or"
+            android:textSize="14dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/editTextPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="***************"
-        android:textSize="20sp"
-        android:inputType="textPassword"
-        android:textColor="#000000"
-        app:layout_constraintTop_toBottomOf="@id/passwordText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- Botón de inicio de sesión con Google. -->
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_google_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/orTextDivisor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-
-    <TextView
-        android:id="@+id/orTextDivisor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="or"
-        android:textSize="14dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/editTextPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <!-- Google Sign In Button -->
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/sign_in_google_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/orTextDivisor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-
-    <Button
-        android:id="@+id/buttonRegister"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/register"
-        android:backgroundTint="@color/verdeButton"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/sign_in_google_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- Botón para registrar al usuario con los datos ingresados. -->
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:backgroundTint="@color/verdeButton"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/sign_in_google_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

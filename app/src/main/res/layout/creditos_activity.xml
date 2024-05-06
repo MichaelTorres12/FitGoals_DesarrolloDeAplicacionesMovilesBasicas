@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView asegura que todos los elementos de la UI sean accesibles en pantallas de diferentes tamaños permitiendo desplazarse verticalmente. -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- ConstraintLayout permite un diseño flexible y adaptable de los elementos de la UI. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
 
+        <!-- Título de la sección de créditos. -->
         <TextView
             android:id="@+id/tvCreditsTitle"
             android:layout_width="wrap_content"
@@ -22,7 +25,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-
+        <!-- Información sobre el propósito de la aplicación. -->
         <TextView
             android:id="@+id/tvAppDoneFor"
             android:layout_width="0dp"
@@ -35,7 +38,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-
+        <!-- Nombres de los desarrolladores involucrados en la creación de la app. -->
         <TextView
             android:id="@+id/tvCreditsInfoNames"
             android:layout_width="0dp"
@@ -47,7 +50,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-
+        <!-- Módulo o curso para el cual fue desarrollada la aplicación. -->
         <TextView
             android:id="@+id/tvModule"
             android:layout_width="0dp"
@@ -60,7 +63,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-
+        <!-- Nombre del módulo o curso. -->
         <TextView
             android:id="@+id/tvModuleName"
             android:layout_width="0dp"
@@ -72,7 +75,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-
+        <!-- Información sobre el docente del curso. -->
         <TextView
             android:id="@+id/teacher"
             android:layout_width="0dp"
@@ -85,7 +88,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-
+        <!-- Nombre del docente. -->
         <TextView
             android:id="@+id/teacherName"
             android:layout_width="0dp"
@@ -97,7 +100,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <!-- Foto de los creadores -->
+        <!-- Foto representativa de los creadores o del equipo. -->
         <ImageView
             android:id="@+id/ivCreatorsPhoto"
             android:layout_width="0dp"
@@ -109,7 +112,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="30dp"/>
 
-        <!-- Botón de regreso -->
+        <!-- Botón para volver a la pantalla anterior. -->
         <Button
             android:id="@+id/btnBack"
             android:layout_width="match_parent"
