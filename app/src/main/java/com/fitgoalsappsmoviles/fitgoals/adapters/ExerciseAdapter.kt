@@ -32,6 +32,7 @@ class ExerciseAdapter(private var exercises: List<Exercise>, private val context
         holder.bind(exercises[position], context)
     }
 
+    // Retorna el tamaño del conjunto de datos (invocado por el layout manager)
     override fun getItemCount() = exercises.size
 
     // Actualiza la lista de ejercicios y notifica cambios al RecyclerView.

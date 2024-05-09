@@ -72,6 +72,7 @@ class LoginActivity : AppCompatActivity() {
         finish()
     }
 
+    //Agregar comentario de que hace esto
     companion object {
         private const val RC_SIGN_IN = 1001 // Código de solicitud para el inicio de sesión con Google.
     }

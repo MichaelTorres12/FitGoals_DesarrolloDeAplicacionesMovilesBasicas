@@ -15,8 +15,8 @@ class UserViewModel : ViewModel() {
     // Instancia de AuthenticationService que utiliza UserRepository para operaciones relacionadas con la autenticación.
     private val authService = AuthenticationService(UserRepository())
 
-    // Método para registrar usuarios nuevos. Este método toma un email y contraseña, y un callback para manejar la respuesta.
-    // Utiliza authService para delegar la acción de registro. El callback es llamado con 'true' si el registro es exitoso, y 'false' si falla.
+    // Método para registrar usuarios nuevos. Este método que toma un email y contraseña, y un callback para manejar la respuesta.
+    // Utiliza authenticationService para delegar la acción de registro. El callback es llamado con 'true' si el registro es exitoso, y 'false' si falla.
     fun registerUser(email: String, password: String, callback: (Boolean) -> Unit) {
         authService.registerUser(email, password, callback)
     }

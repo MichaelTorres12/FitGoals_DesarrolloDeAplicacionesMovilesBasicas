@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home -> setCurrentFragment(homeFragment)  // Muestra HomeFragment.
                 R.id.navigation_profile -> setCurrentFragment(profileFragment)  // Muestra ProfileFragment.
             }
-            true  // Retorna true para mostrar que el evento de selección de menú ha sido manejado.
+            true  // Retorna true para mostrar que el evento de selección de menú ha sido manejado con éxito.
         }
     }
 
